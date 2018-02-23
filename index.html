@@ -6,13 +6,13 @@
         <title>Order Form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-        <script src="js/app.js"></script>
     </head>
-
+    
+    
     <body>
         <h1>Order Form</h1>
         <p>Please select the item from the drop down menu, identify the quantity, and then select "Add". Once you have added all of your items, fill out your information, and then click "Submit".</p>
-
+        
         <table id="priceList">
             <thead>Price List</thead>
             <tr>
@@ -125,7 +125,7 @@
                 <td>$8.00</td>
             </tr>
         </table>
-
+        
         <form id="orderSelection">
             <fieldset>
                 <select id="title">
@@ -155,52 +155,55 @@
                 <button type="submit" name="add">Add</button>
             </fieldset>
         </form>
-
+        
         <table id="selectionTable">
             <tr>
                 <th>Product</th>
                 <th>Quantity</th>
             </tr>
         </table>
-
+        
         <form id="personalInfo">
             <fieldset>
                 <div>
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required />
+                    <label for="first">First Name</label>
+                    <input type="text" id="first" name="first" required />
                 </div>
                 <div>
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" required />
+                    <label for="last">Last Name</label>
+                    <input type="text" id="last" name="last" required />
                 </div>
                 <div>
-                    <label for="street">Street</label>
-                    <input type="text" id="street" name="street" required />
+                    <label for="address">Street</label>
+                    <input type="text" id="address" name="address" required />
                 </div>
                 <div>
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" required />
+                    <label for="town">City</label>
+                    <input type="text" id="town" name="town" required />
                 </div>
                 <div>
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" required />
+                    <label for="st">State</label>
+                    <input type="text" id="st" name="st" required />
                 </div>
                 <div>
-                    <label for="zipCode">Zip Code</label>
-                    <input type="text" id="zipCode" name="zipCode" required />
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required />
                 </div>
                 <div>
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" />
+                    <label for="number">Phone Number</label>
+                    <input type="text" id="number" name="number" />
                 </div>
                 <div>
-                    <label for="emailAddy">Email Address</label>
-                    <input type="text" id="emailAddy" name="emailAddy" required />
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" required />
                 </div>
                 <div>
                     <button type="submit" name="submit">Submit</button>
                 </div>
             </fieldset>
         </form>
+
+        <script src="js/app.js"></script>
+        <script src="js/app2.js"></script>
     </body>
-</html>
+    </html>
