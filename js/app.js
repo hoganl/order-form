@@ -31,9 +31,8 @@ function makeSelectionRows() {
   }
 }
 
-makeSelectionRows();
 
-var entryForm = document.getElementById('orderSelection');
+Order.entryForm = document.getElementById('orderSelection');
 
 function handleSelection(event) {
   event.preventDefault();
@@ -50,6 +49,14 @@ function handleSelection(event) {
 
   event.target.reset();
   makeSelectionRows();
+  localStorage.setItem('productsChosenArray', JSON.stringify(Order.productsChosen));
 }
 
-entryForm.addEventListener('submit', handleSelection);
+
+if (!localStorage) {
+  var retrieveData = localStorage.getItem('productsChosenArray');
+  Order.productsChosen = JSON.parse(retrieveData);
+}
+
+makeSelectionRows();
+Order.entryForm.addEventListener('submit', handleSelection);
